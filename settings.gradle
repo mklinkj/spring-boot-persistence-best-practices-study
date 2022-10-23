@@ -1,0 +1,11 @@
+pluginManagement {
+	repositories {
+		maven { url 'https://repo.spring.io/milestone' }
+		gradlePluginPortal()
+	}
+}
+
+rootProject.name = 'spring-boot-persistence-best-practices-study'
+
+include('chap01:sbpbp-ch01-item001')
+
