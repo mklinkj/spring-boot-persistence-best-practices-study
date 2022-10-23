@@ -1,7 +1,7 @@
 # application.yml
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localvmdb.oracle_xe_18c:1521:XE
+    url: jdbc:mysql://localvmdb.mysql_8:3306/sbp_study?characterEncoding=utf8
     username: sbp_user
     password: sbp_pass
   sql:
@@ -26,5 +26,5 @@ spring:
   #           drop-source: metadata
   #           create-source: metadata-then-script
   #           create-script-source: sql/hsqldb/init-data-insert.sql
-  #   # open-in-view에 대해서 책 후반부에 논의하는 부분이 있다. 
+  #   # open-in-view에 대해서 책 후반부에 논의하는 부분이 있다.
   #   open-in-view: false

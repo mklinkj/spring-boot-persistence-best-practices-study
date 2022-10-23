@@ -10,6 +10,22 @@
 
 
 
+## MySQL 8.x
+> Oracle은 나중에 생각해보고.... 저자님과 동일하게 MySQL 8 기준으로 하는 것이 낫겠다.
+
+```sql
+CREATE DATABASE sbp_study CHARACTER SET utf8mb4;
+
+CREATE USER 'sbp_user'@'localhost' IDENTIFIED BY 'sbp_pass';
+CREATE USER 'sbp_user'@'%' IDENTIFIED BY 'sbp_pass';
+
+GRANT ALL PRIVILEGES ON sbp_study.* TO 'sbp_user'@'localhost';
+GRANT ALL PRIVILEGES ON sbp_study.* TO 'sbp_user'@'%';
+-- 위와 같이하면 GRANT OPTION 빼고 모든 권한을 준다.
+```
+
+
+
 ## Oracle XE 18c
 
 ```sql
@@ -25,19 +41,6 @@ ALTER USER sbp_user DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
 ```
 
 
-
-## MySQL 8.x
-
-```sql
-CREATE DATABASE sbp_study CHARACTER SET utf8mb4;
-
-CREATE USER 'sbp_user'@'localhost' IDENTIFIED BY 'sbp_pass';
-CREATE USER 'sbp_user'@'%' IDENTIFIED BY 'sbp_pass';
-
-GRANT ALL PRIVILEGES ON sbp_study.* TO 'sbp_user'@'localhost';
-GRANT ALL PRIVILEGES ON sbp_study.* TO 'sbp_user'@'%';
--- 위와 같이하면 GRANT OPTION 빼고 모든 권한을 준다.
-```
 
 
 
