@@ -34,8 +34,6 @@
 
 ### @JoinColumn을 사용하여 조인 열 이름 지정
 
-
-
 > 엔티티를 삭제할 때... `CascadeType.REMOVE`, orphanRemoval=true 가  작업을 수행하는 동안 너무 많은 SQL문을 생성할 수 있음.
 > 이후 몇몇 장에 대량 작업 처리 관련해서 나오는데 아래장을 보라고 한다.
 >
@@ -47,8 +45,6 @@
 ### 예제 프로젝트
 
 * 저자님 프로젝트:  [HibernateSpringBootOneToManyBidirectional](https://github.com/AnghelLeonard/Hibernate-SpringBoot/tree/master/HibernateSpringBootOneToManyBidirectional)
-
-* 
 
 ### 참조
 

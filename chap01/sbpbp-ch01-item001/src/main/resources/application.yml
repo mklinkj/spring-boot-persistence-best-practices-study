@@ -1,30 +1,37 @@
 # application.yml
 spring:
   datasource:
-    url: jdbc:mysql://localvmdb.mysql_8:3306/sbp_study?characterEncoding=utf8
+    url: jdbc:mysql://localvmdb.mysql_8:3306/sbp_study?characterEncoding=utf8&createDatabaseIfNotExist=true
     username: sbp_user
     password: sbp_pass
   sql:
     init:
       mode: always
+      platform: mysql # data-{platform}.sql 형식의 파일을 읽어서 초기화한다.
   jpa:
     # open-in-view에 대해서 책 후반부에 논의하는 부분이 있다.
     open-in-view: false
-    # hibernate:
-    #   naming:
-    #     physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-    # properties:
-    #   hibernate:
-    #     hbm2ddl:
-    #       "[import_files_sql_extractor]": org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
-    #       "[charset_name]": UTF-8
-    #     "[format_sql]": true
-    #     "[show_sql]": true
-    #   javax:
-    #     persistence:
-    #       schema-generation:
-    #         database:
-    #           action: drop-and-create
-    #         drop-source: metadata
-    #         create-source: metadata-then-script
-    #         create-script-source: sql/hsqldb/init-data-insert.sql
+    hibernate:
+      naming:
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      ddl-auto: create
+    properties:
+      hibernate:
+        hbm2ddl:
+          "[import_files_sql_extractor]": org.hibernate.tool.schema.internal.script.MultiLineSqlScriptExtractor
+          "[charset_name]": UTF-8
+        "[format_sql]": true
+        dialect: org.hibernate.dialect.MySQLDialect
+      jakarta:
+        persistence:
+          sharedCache:
+            mode: UNSPECIFIED
+    show-sql: true
+    defer-datasource-initialization: true
+  output:
+    ansi:
+      enabled: always
+
+logging:
+  level:
+    web: INFO # logback-spring.xml을 따로 설정해도 이 설정도 같이 적용 됨.

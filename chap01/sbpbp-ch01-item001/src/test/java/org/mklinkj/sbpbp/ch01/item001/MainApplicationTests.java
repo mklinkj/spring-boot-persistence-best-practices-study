@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @Slf4j
 @SpringBootTest
-class SbpbpCh01Item001ApplicationTests {
+class MainApplicationTests {
   @Test
   void contextLoads() {
     LOGGER.info("안녕하세요! JPA");
