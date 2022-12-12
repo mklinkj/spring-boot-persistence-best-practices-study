@@ -21,7 +21,6 @@ public class BookstoreService {
   */
   @Transactional
   public void insertAuthorWithBooks() {
-
     Author jn = new Author();
     jn.setName("Joana Nimar");
     jn.setAge(34);
