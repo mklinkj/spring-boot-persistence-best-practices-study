@@ -6,7 +6,7 @@
 
 ## 아이템2: [단방향 @OneToMany 연관을 피해야 하는 이유](sbpbp-ch01-item002)
 
-
+## 아이템3: [단방향 `@ManyToOne`은 얼마나 효율적인가](sbpbp-ch01-item003)
 
 
 
