@@ -9,3 +9,4 @@ rootProject.name = 'spring-boot-persistence-best-practices-study'
 
 include('chap01:sbpbp-ch01-item001')
 include('chap01:sbpbp-ch01-item002')
+include('chap01:sbpbp-ch01-item003')

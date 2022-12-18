@@ -1,2 +1,3 @@
 chap01\sbpbp-ch01-item001
 chap01\sbpbp-ch01-item002
+chap01\sbpbp-ch01-item003
