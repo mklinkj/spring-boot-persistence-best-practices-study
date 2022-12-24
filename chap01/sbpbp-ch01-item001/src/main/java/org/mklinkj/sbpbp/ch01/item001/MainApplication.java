@@ -25,11 +25,11 @@ public class MainApplication {
       System.out.println("\nInsert author with books  ...");
       bookstoreService.insertAuthorWithBooks();
 
-      System.out.println("\nDelete a book of an author...");
-      bookstoreService.deleteBookOfAuthor();
+     // System.out.println("\nDelete a book of an author...");
+      //bookstoreService.deleteBookOfAuthor();
 
-      System.out.println("\nDelete all book of an author...");
-      bookstoreService.deleteAllBooksOfAuthor();
+      //System.out.println("\nDelete all book of an author...");
+      //bookstoreService.deleteAllBooksOfAuthor();
     };
   }
 }
